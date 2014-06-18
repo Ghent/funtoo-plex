@@ -35,9 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	mkdir data
-	mkdir control
-	tar -xzf data.tar.gz -C data
-	tar -xzf control.tar.gz -C control
+	tar -xzf data.tar.gz -C data || die "unpack fail"
 }
 
 src_install() {
