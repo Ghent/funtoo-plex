@@ -56,7 +56,7 @@ src_install() {
 	rmdir etc/default || die
 
 	einfo "cleaning apt config entry"
-	rm -r etc/apt || die
+	rm -fr etc/apt
 
 	einfo "patching startup"
 	# apply patch for start_pms to use the new config file
